@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:8081/emm
+    username: emm
+    password: emm
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: 'create-drop'
+    properties:
+      hibernate:
+        format_sql: true
+
+#  docker run -it -e POSTGRES_USER=emm -e POSTGRES_PASSWORD=emm -p 8081:5432 -v /data2:/var/lib/postgresql/data --name emm-postgresql postgres:14.5
